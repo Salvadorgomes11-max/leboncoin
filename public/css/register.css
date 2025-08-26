@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: antiquewhite;
+}
+
+header {
+    background-color: rgb(25, 49, 69);
+    color: white;
+    padding: 1rem 0;
+    margin-bottom: .5rem;
+    box-shadow: 3px 3px 3px 5px;
+}
+
+article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header a {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#logo{
+    background-color: rgb(16, 80, 220);
+    border-radius: 5px;
+    padding: .8rem;
+}
+
+#disconect{
+    background-color: rgb(173, 14, 20);
+    border-radius: 5px;
+    padding: .8rem;
+}
+
+/* ______________________________________________________________ */
+
+main{}
+
+main > section > article {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+form{
+    background-color: rgb(177, 150, 15);
+    padding: 2rem;
+    width: 30%;
+    border-radius: 10px;
+    
+    
+}
+
+input{
+    width: 100%;
+    height: 2rem;
+    border-radius: 10px;
+}
+
+button{
+    background-color: rgb(242, 246, 247);
+    padding: 1rem;
+    border-radius: 10px;
+    
+}
+
+/* tablet */
+@media (max-width: 595px){
+
+    /* header____________________________________ */
+    article {
+        position: relative;
+    
+    }
+
+    article > nav {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        padding: 1rem;
+        top: 100%;
+        right: 0;
+        background-color: rgb(25, 49, 69);
+        z-index: 2;
+    }
+
+    article > nav.active {
+        display: flex;
+    }    
+} 
+
+/* computador */
+@media (min-width: 595px){
+
+    .logo img {
+        display: none;
+    }
+    
+}

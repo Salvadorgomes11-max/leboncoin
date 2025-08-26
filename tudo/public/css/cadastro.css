@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: antiquewhite;
+}
+
+header {
+    background-color: rgb(25, 49, 69);
+    color: white;
+    padding: 1rem 0;
+    margin-bottom: .5rem;
+    box-shadow: 3px 3px 3px 5px;
+}
+
+article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header a {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}

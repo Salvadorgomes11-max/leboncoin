@@ -1,0 +1,72 @@
+MVC
+
+✅ Projeto: Site de Anúncios
+🎯 Objetivo: Criar um site onde os usuários possam cadastrar, listar e buscar anúncios.
+📦 Tecnologias usadas:
+- PHP (com orientação a objetos)
+- Padrão MVC (Model-View-Controller)
+- MySQL (banco de dados)
+- HTML, CSS, Bootstrap
+
+📁 Estrutura atual do projeto:
+- Pasta 'LEBONCOIN/' dentro dela tem
+	-figma/ dentro de tem
+		
+	-public/ dentro dela tem
+		-assests
+		-css
+		-INFORMACOES
+		-js
+		-leboncon.sql
+	-src/ dentro dela tem
+		-config/DataBase.php
+		-controllers/ControllerAnuncio.php
+		-models/ModelAnuncio
+		-views/
+	-vendor dentro del tem
+		-autoload.php
+		-composer
+	-composer.json
+	-index.php
+	-teste.php
+
+🗃️ Banco de dados:
+
+- Tabela `users` com os campos: id-cria relacao com user_id(tabela anuncio), name, email, password, created_at
+
+- Tabela `anuncios` com os campos: id cria relacao com anucio_id(tabela imagens), user_id, name, descricao, preco, categoria, image, created_at
+
+-tabela 'imagens' com os campos: id, anuncio_id-, path, created_at
+
+
+🛠️ Funcionalidades já feitas:
+-altorouter/altorouter foi instalado com sucesso e o autoload foi gerado.
+- Testei a rota e esta funcionando 
+	$router->map('GET', '/', 'ControllerAnuncio#listarTodos', 'home');
+
+-testei class ModelAnuncio com a funcao 
+	public function listarAnuncio(){
+        $sql = "SELECT * FROM anuncios";
+        $consulta = $this->conexao->prepare($sql);
+        $consulta->execute();
+        return $resultado = $consulta->fetchALL(PDO::FETCH_ASSOC); //recebe o resultado da consulta
+
+    }
+
+-testei a class ControllerAnuncio com a funcao 
+ 	public function listarTodos(){
+        $anucios = $this->modelo->listarAnuncio();
+        if(empty($anucios)){
+            echo 'A inda nao tem anuncios registrado no bango de dados' . '<br>';
+        }else{
+            echo 'Aqui estão os anuncios registrados no banco de dados' . '<br>';
+            echo '<pre>';
+            echo var_dump($anucios);
+            echo '<pre>';
+        }    
+    }
+
+
+
+📌 O que queremos fazer agora:
+

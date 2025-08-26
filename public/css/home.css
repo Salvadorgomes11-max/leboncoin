@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: antiquewhite;
+}
+
+header {
+    background-color: rgb(25, 49, 69);
+    color: white;
+    padding: 1rem 0;
+    margin-bottom: .5rem;
+    box-shadow: 3px 3px 3px 5px;
+}
+
+header > section > article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+header a {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+#logo{
+    background-color: rgb(16, 80, 220);
+    border-radius: 5px;
+    padding: .8rem;
+}
+
+#disconect{
+    background-color: rgb(173, 14, 20);
+    border-radius: 5px;
+    padding: .8rem;
+}
+
+/* _______________________________________________________________________ */
+
+main > section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+#anuncio{
+    margin-top: 3rem;
+    background-color: antiquewhite;
+    justify-content:center;
+    width: 100%;
+    
+}
+
+#categoria{
+    display: flex;
+    gap: 1rem;
+    background-color: rgb(8, 30, 73);
+    padding: 1rem;
+    border-radius: 10px;
+
+}
+
+
+main > section > article{
+    flex: 1 1 18%;
+    max-width: 220px;
+    background-color: rgb(13, 26, 55);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+}
+
+main > section > article img {
+    width: 100%;
+    max-height: 140px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+main a {
+    color:white;
+    text-decoration: none;
+    
+}
+
+button{
+    margin-top: auto;
+    background-color: rgb(55, 81, 120);
+}
+
+/* tablet */
+@media (max-width: 595px){
+
+    /* header____________________________________ */
+    article {
+        position: relative;
+    
+    }
+
+    article > nav {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        padding: 1rem;
+        top: 100%;
+        right: 0;
+        background-color: rgb(25, 49, 69);
+        z-index: 2;
+    }
+
+    article > nav.active {
+        display: flex;
+
+    }
+
+    /* main_______________________________________________________ */
+
+    #anuncio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+
+    #anuncio article{
+        flex: 1 1 calc(50% - 1rem)
+    }
+
+}
+
+
+
+/* movel */
+@media (max-width: 498px){
+
+    #anuncio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem;
+        
+    }
+
+    #anuncio article{
+        flex: 1 1 calc(28% - .3rem);
+    }
+
+}
+
+
+
+/* computador */
+@media (min-width: 595px){
+
+    .logo img {
+        display: none;
+    }
+    
+}
+
+
+
+
